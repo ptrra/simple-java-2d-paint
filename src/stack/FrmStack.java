@@ -93,7 +93,7 @@ public class FrmStack extends JFrame
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				if (!listRectangle.isSelectionEmpty())
+				if (!dlm.isEmpty())
 				{
 					DlgStack dlgModify = new DlgStack();
 					dlgModify.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1).toString().split(","));
@@ -110,13 +110,9 @@ public class FrmStack extends JFrame
 					}
 					dlgModify.dispose();
 				}
-				else if (dlm.isEmpty())
-				{
-					JOptionPane.showMessageDialog(null, "The list is empty!");
-				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "You have to select an item!");
+					JOptionPane.showMessageDialog(null, "The list is empty!");
 				}
 			}
 		});
@@ -127,14 +123,14 @@ public class FrmStack extends JFrame
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				if (!listRectangle.isSelectionEmpty())
+				if (!dlm.isEmpty())
 				{
 					DlgStack dlgDelete = new DlgStack();
-					dlgDelete.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1).toString().split(","));
+					dlgDelete.setTxt(rr.get(rr.size() - 1).toString().split(","));
 					dlgDelete.setVisible(true);
 					if (dlgDelete.isOk())
 					{
-						rr.remove(rr.size() - listRectangle.getSelectedIndex() - 1);
+						rr.remove(rr.size() - 1);
 						dlm.removeAllElements();
 						for (int i = rr.size() - 1; i >= 0 ; i--)
 						{
@@ -143,13 +139,9 @@ public class FrmStack extends JFrame
 					}
 					dlgDelete.dispose();
 				}
-				else if (dlm.isEmpty())
-				{
-					JOptionPane.showMessageDialog(null, "The list is empty!");
-				}
 				else
 				{
-					JOptionPane.showMessageDialog(null, "You have to select an item!");
+					JOptionPane.showMessageDialog(null, "The list is empty!");
 				}
 			}
 		});
