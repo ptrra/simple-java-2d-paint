@@ -16,7 +16,7 @@ public class PnlDrawing extends JPanel
 	
 	public void paint(Graphics g)
 	{	
-		super.paintComponent(g);
+		super.paint(g);
 		for(Shape s : shapes)
 		{
 			s.draw(g);
