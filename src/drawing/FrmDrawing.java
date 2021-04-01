@@ -123,6 +123,7 @@ public class FrmDrawing extends JFrame
 					{
 						DlgPoint dlgAdd = new DlgPoint();
 						dlgAdd.setTxt(click[0].getX(), click[0].getY());
+						dlgAdd.setTitle("Add Point");
 						dlgAdd.setVisible(true);
 						if (dlgAdd.isOk())
 						{
@@ -137,6 +138,7 @@ public class FrmDrawing extends JFrame
 						{
 							DlgLine dlgAdd = new DlgLine();
 							dlgAdd.setTxt(click[1].getX(), click[1].getY(), click[0].getX(), click[0].getY());
+							dlgAdd.setTitle("Add Line");
 							dlgAdd.setVisible(true);
 							if (dlgAdd.isOk())
 							{
@@ -152,6 +154,7 @@ public class FrmDrawing extends JFrame
 					{
 						DlgCircle dlgAdd = new DlgCircle();
 						dlgAdd.setTxt(click[0].getX(), click[0].getY(), 0);
+						dlgAdd.setTitle("Add Circle");
 						dlgAdd.setVisible(true);
 						if (dlgAdd.isOk())
 						{
@@ -164,6 +167,7 @@ public class FrmDrawing extends JFrame
 					{
 						DlgRectangle dlgAdd = new DlgRectangle();
 						dlgAdd.setTxt(click[0].getX(), click[0].getY(), 0, 0);
+						dlgAdd.setTitle("Add Rectangle");
 						dlgAdd.setVisible(true);
 						if (dlgAdd.isOk())
 						{
@@ -176,6 +180,7 @@ public class FrmDrawing extends JFrame
 					{
 						DlgDonut dlgAdd = new DlgDonut();
 						dlgAdd.setTxt(click[0].getX(), click[0].getY(), 0, 0);
+						dlgAdd.setTitle("Add Donut");
 						dlgAdd.setVisible(true);
 						if (dlgAdd.isOk())
 						{
@@ -214,6 +219,7 @@ public class FrmDrawing extends JFrame
 						DlgPoint dlgModify = new DlgPoint();
 						dlgModify.setTxt(pomm.getX(), pomm.getY());
 						dlgModify.setColor(pomm.getColor());
+						dlgModify.setTitle("Modify Point");
 						dlgModify.setVisible(true);
 						if (dlgModify.isOk())
 						{
@@ -231,6 +237,7 @@ public class FrmDrawing extends JFrame
 						DlgLine dlgModify = new DlgLine();
 						dlgModify.setTxt(pomm.getStartPoint().getX(), pomm.getStartPoint().getY(), pomm.getEndPoint().getX(), pomm.getEndPoint().getY());
 						dlgModify.setColor(pomm.getColor());
+						dlgModify.setTitle("Modify Line");
 						dlgModify.setVisible(true);
 						if (dlgModify.isOk())
 						{
@@ -249,6 +256,7 @@ public class FrmDrawing extends JFrame
 						dlgModify.setTxt(pomm.getUpperLeftPoint().getX(), pomm.getUpperLeftPoint().getY(), pomm.getWidth(), pomm.getHeight());
 						dlgModify.setColor(pomm.getColor());
 						dlgModify.setInnerColor(pomm.getInnerColor());
+						dlgModify.setTitle("Modify Rectangle");
 						dlgModify.setVisible(true);
 						if (dlgModify.isOk())
 						{
@@ -267,6 +275,7 @@ public class FrmDrawing extends JFrame
 						dlgModify.setTxt(pomm.getCenter().getX(), pomm.getCenter().getY(), pomm.getRadius(), pomm.getInnerRadius());
 						dlgModify.setColor(pomm.getColor());
 						dlgModify.setInnerColor(pomm.getInnerColor());
+						dlgModify.setTitle("Modify Donut");
 						dlgModify.setVisible(true);
 						if (dlgModify.isOk())
 						{
@@ -285,6 +294,7 @@ public class FrmDrawing extends JFrame
 						dlgModify.setTxt(pomm.getCenter().getX(), pomm.getCenter().getY(), pomm.getRadius());
 						dlgModify.setColor(pomm.getColor());
 						dlgModify.setInnerColor(pomm.getInnerColor());
+						dlgModify.setTitle("Modify Circle");
 						dlgModify.setVisible(true);
 						if (dlgModify.isOk())
 						{

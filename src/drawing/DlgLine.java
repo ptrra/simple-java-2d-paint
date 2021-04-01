@@ -46,7 +46,6 @@ public class DlgLine extends JDialog
 
 	public DlgLine()
 	{
-		setTitle("Line");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 155) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 210) / 2, 155, 210);

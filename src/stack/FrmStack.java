@@ -73,6 +73,7 @@ public class FrmStack extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				DlgStack dlgAdd = new DlgStack();
+				dlgAdd.setTitle("Add");
 				dlgAdd.setVisible(true);
 				if (dlgAdd.isOk())
 				{
@@ -96,12 +97,13 @@ public class FrmStack extends JFrame
 				if (!dlm.isEmpty())
 				{
 					DlgStack dlgModify = new DlgStack();
-					dlgModify.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1).toString().split(","));
+					dlgModify.setTxt(rr.get(rr.size() - 1));
+					dlgModify.setTitle("Modify");
 					dlgModify.setVisible(true);
 					if (dlgModify.isOk())
 					{
-						rr.remove(rr.size() - listRectangle.getSelectedIndex() - 1);
-						rr.add(rr.size() - listRectangle.getSelectedIndex(), dlgModify.getR());
+						rr.remove(rr.size() - 1);
+						rr.add(dlgModify.getR());
 						dlm.removeAllElements();
 						for (int i = rr.size() - 1; i >= 0 ; i--)
 						{
@@ -126,7 +128,8 @@ public class FrmStack extends JFrame
 				if (!dlm.isEmpty())
 				{
 					DlgStack dlgDelete = new DlgStack();
-					dlgDelete.setTxt(rr.get(rr.size() - 1).toString().split(","));
+					dlgDelete.setTxt(rr.get(rr.size() - 1), false);
+					dlgDelete.setTitle("Delete");
 					dlgDelete.setVisible(true);
 					if (dlgDelete.isOk())
 					{

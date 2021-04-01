@@ -47,7 +47,6 @@ public class DlgDonut extends JDialog
 
 	public DlgDonut()
 	{
-		setTitle("Donut");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 160) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 235) / 2, 160, 235);

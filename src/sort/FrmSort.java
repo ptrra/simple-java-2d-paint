@@ -73,6 +73,7 @@ public class FrmSort extends JFrame
 			public void actionPerformed(ActionEvent e)
 			{
 				DlgSort dlgAdd = new DlgSort();
+				dlgAdd.setTitle("Add");
 				dlgAdd.setVisible(true);
 				if (dlgAdd.isOk())
 				{
@@ -113,7 +114,8 @@ public class FrmSort extends JFrame
 				if (!listRectangle.isSelectionEmpty())
 				{
 					DlgSort dlgModify = new DlgSort();
-					dlgModify.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1).toString().split(","));
+					dlgModify.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1));
+					dlgModify.setTitle("Modify");
 					dlgModify.setVisible(true);
 					if (dlgModify.isOk())
 					{
@@ -164,7 +166,8 @@ public class FrmSort extends JFrame
 				if (!listRectangle.isSelectionEmpty())
 				{
 					DlgSort dlgDelete = new DlgSort();
-					dlgDelete.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1).toString().split(","));
+					dlgDelete.setTxt(rr.get(rr.size() - listRectangle.getSelectedIndex() - 1), false);
+					dlgDelete.setTitle("Delete");
 					dlgDelete.setVisible(true);
 					if (dlgDelete.isOk())
 					{

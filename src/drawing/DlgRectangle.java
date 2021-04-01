@@ -47,7 +47,6 @@ public class DlgRectangle extends JDialog
 
 	public DlgRectangle()
 	{
-		setTitle("Rectangle");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 160) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 235) / 2, 160, 235);

@@ -43,7 +43,6 @@ public class DlgPoint extends JDialog
 
 	public DlgPoint()
 	{
-		setTitle("Point");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 160) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 175) / 2, 160, 175);

@@ -46,7 +46,6 @@ public class DlgCircle extends JDialog
 
 	public DlgCircle()
 	{
-		setTitle("Circle");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 160) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 210) / 2, 160, 210);

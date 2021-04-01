@@ -43,7 +43,6 @@ public class DlgStack extends JDialog
 
 	public DlgStack()
 	{
-		setTitle("Stack");
 		setModal(true);
 		setResizable(false);
 		setBounds((int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 400) / 2, (int) (java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 200) / 2, 400, 200);
@@ -187,11 +186,23 @@ public class DlgStack extends JDialog
 		return this.r;
 	}
 	
-	public void setTxt(String[] pom)
+	public void setTxt(Rectangle r)
 	{
-		this.txtX.setText(pom[0].substring(7,pom[0].length()));
-		this.txtY.setText(pom[1].substring(0, pom[1].length() - 1));
-		this.txtWidth.setText(pom[2].substring(5,pom[2].length()));
-		this.txtHeight.setText(pom[3].substring(5,pom[3].length()));
+		this.txtX.setText(String.valueOf(r.getUpperLeftPoint().getX()));
+		this.txtY.setText(String.valueOf(r.getUpperLeftPoint().getY()));
+		this.txtWidth.setText(String.valueOf(r.getWidth()));
+		this.txtHeight.setText(String.valueOf(r.getHeight()));
+	}
+	
+	public void setTxt(Rectangle r, boolean b)
+	{
+		this.txtX.setText(String.valueOf(r.getUpperLeftPoint().getX()));
+		this.txtY.setText(String.valueOf(r.getUpperLeftPoint().getY()));
+		this.txtWidth.setText(String.valueOf(r.getWidth()));
+		this.txtHeight.setText(String.valueOf(r.getHeight()));
+		this.txtX.setEditable(b);
+		this.txtY.setEditable(b);
+		this.txtWidth.setEditable(b);
+		this.txtHeight.setEditable(b);
 	}
 }
