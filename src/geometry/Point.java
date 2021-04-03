@@ -127,7 +127,7 @@ public class Point extends Shape
 		if (o instanceof Point)
 		{
 			Point pom = new Point(0,0);
-			return (int) (this.distance(pom.getX(),pom.getY()) - ((Point) o).distance(pom.getX(),pom.getY()));
+			return (int) (this.distance(pom.getX(), pom.getY()) - ((Point) o).distance(pom.getX(), pom.getY()));
 		}
 		return 0;
 	}
